@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Twozo CRM Automation Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 30, 2025 04:59:53 PM</span></a>
+<a href="#"><span class="badge badge-primary">Dec 31, 2025 02:31:04 PM</span></a>
 </li>
 </ul>
 </div>
@@ -76,7 +76,6 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
@@ -91,25 +90,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author="Jabez"
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">webTables</p>
+            <p class="name">activitiesTables</p>
             <p class="text-sm">
-              <span>5:00:01 PM</span> / <span>00:00:21:841</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>2:31:12 PM</span> / <span>00:00:10:231</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">webTables</h5>
-<span class='badge badge-success'>12.30.2025 5:00:01 PM</span>
-<span class='badge badge-danger'>12.30.2025 5:00:22 PM</span>
-<span class='badge badge-default'>00:00:21:841</span>
+<h5 class="test-status text-fail">activitiesTables</h5>
+<span class='badge badge-success'>12.31.2025 2:31:12 PM</span>
+<span class='badge badge-danger'>12.31.2025 2:31:22 PM</span>
+<span class='badge badge-default'>00:00:10:231</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -122,10 +121,41 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:00:22 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:31:22 PM</td>
         <td>
-          Test Passed
+          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64128}, goog:processID: 12332, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64128/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2868da1007eebf42e459c2c607c559f6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.twozo.crm.base.BasePage.type(BasePage.java:30)
+	at com.twozo.crm.page.login.LoginPage.enterEmailId(LoginPage.java:23)
+	at com.twozo.crm.page.login.LoginPage.loginToCRM(LoginPage.java:41)
+	at com.twozo.crm.CRMTest.activitiesTables(CRMTest.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</textarea>
+          
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/activitiesTables_1767171682479.png' src="screenshots/activitiesTables_1767171682479.png">
+  
+    
+
+    </div></div>
         </td>
       </tr>
   </tbody>
@@ -133,25 +163,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="2"
+        <li class="test-item"  status="fail" test-id="2"
           author="Jabez"
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">performSearch</p>
+            <p class="name">addNewCompany</p>
             <p class="text-sm">
-              <span>5:00:28 PM</span> / <span>00:00:07:766</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>2:31:25 PM</span> / <span>00:00:10:121</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">performSearch</h5>
-<span class='badge badge-success'>12.30.2025 5:00:28 PM</span>
-<span class='badge badge-danger'>12.30.2025 5:00:36 PM</span>
-<span class='badge badge-default'>00:00:07:766</span>
+<h5 class="test-status text-fail">addNewCompany</h5>
+<span class='badge badge-success'>12.31.2025 2:31:25 PM</span>
+<span class='badge badge-danger'>12.31.2025 2:31:35 PM</span>
+<span class='badge badge-default'>00:00:10:121</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -164,10 +194,62 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:00:36 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:31:35 PM</td>
         <td>
-          Test Passed
+          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51961}, goog:processID: 13752, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51961/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6bb3afdc309cd57fe06d33800b4daa60
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.twozo.crm.base.BasePage.type(BasePage.java:30)
+	at com.twozo.crm.page.login.LoginPage.enterEmailId(LoginPage.java:23)
+	at com.twozo.crm.page.login.LoginPage.loginToCRM(LoginPage.java:41)
+	at com.twozo.crm.CRMTest.addNewCompany(CRMTest.java:156)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</textarea>
+          
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/addNewCompany_1767171695132.png' src="screenshots/addNewCompany_1767171695132.png">
+  
+    
+
+    </div></div>
         </td>
       </tr>
   </tbody>
@@ -175,25 +257,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="3"
+        <li class="test-item"  status="fail" test-id="3"
           author="Jabez"
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">companyTables</p>
+            <p class="name">addNewContactsUsingFaker</p>
             <p class="text-sm">
-              <span>5:00:39 PM</span> / <span>00:00:19:553</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>2:31:38 PM</span> / <span>00:00:10:165</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">companyTables</h5>
-<span class='badge badge-success'>12.30.2025 5:00:39 PM</span>
-<span class='badge badge-danger'>12.30.2025 5:00:58 PM</span>
-<span class='badge badge-default'>00:00:19:553</span>
+<h5 class="test-status text-fail">addNewContactsUsingFaker</h5>
+<span class='badge badge-success'>12.31.2025 2:31:38 PM</span>
+<span class='badge badge-danger'>12.31.2025 2:31:48 PM</span>
+<span class='badge badge-default'>00:00:10:165</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -206,10 +288,62 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:00:58 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:31:48 PM</td>
         <td>
-          Test Passed
+          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57320}, goog:processID: 15020, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57320/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bc5aaf851d7a2be0d4a7e26dc9229b0a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.twozo.crm.base.BasePage.type(BasePage.java:30)
+	at com.twozo.crm.page.login.LoginPage.enterEmailId(LoginPage.java:23)
+	at com.twozo.crm.page.login.LoginPage.loginToCRM(LoginPage.java:41)
+	at com.twozo.crm.CRMTest.addNewContactsUsingFaker(CRMTest.java:128)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</textarea>
+          
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/addNewContactsUsingFaker_1767171708825.png' src="screenshots/addNewContactsUsingFaker_1767171708825.png">
+  
+    
+
+    </div></div>
         </td>
       </tr>
   </tbody>
@@ -217,25 +351,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="4"
+        <li class="test-item"  status="fail" test-id="4"
           author="Jabez"
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">dealsTables</p>
+            <p class="name">addNewContactsUsingFaker</p>
             <p class="text-sm">
-              <span>5:01:01 PM</span> / <span>00:00:22:003</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>2:31:50 PM</span> / <span>00:00:10:131</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">dealsTables</h5>
-<span class='badge badge-success'>12.30.2025 5:01:01 PM</span>
-<span class='badge badge-danger'>12.30.2025 5:01:23 PM</span>
-<span class='badge badge-default'>00:00:22:003</span>
+<h5 class="test-status text-fail">addNewContactsUsingFaker</h5>
+<span class='badge badge-success'>12.31.2025 2:31:50 PM</span>
+<span class='badge badge-danger'>12.31.2025 2:32:00 PM</span>
+<span class='badge badge-default'>00:00:10:131</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -248,10 +382,62 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:01:23 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:32:00 PM</td>
         <td>
-          Test Passed
+          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53594}, goog:processID: 11816, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53594/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 48bf14011ad7008f8eae592c685562f1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.twozo.crm.base.BasePage.type(BasePage.java:30)
+	at com.twozo.crm.page.login.LoginPage.enterEmailId(LoginPage.java:23)
+	at com.twozo.crm.page.login.LoginPage.loginToCRM(LoginPage.java:41)
+	at com.twozo.crm.CRMTest.addNewContactsUsingFaker(CRMTest.java:128)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</textarea>
+          
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/addNewContactsUsingFaker_1767171720497.png' src="screenshots/addNewContactsUsingFaker_1767171720497.png">
+  
+    
+
+    </div></div>
         </td>
       </tr>
   </tbody>
@@ -259,25 +445,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="5"
+        <li class="test-item"  status="fail" test-id="5"
           author="Jabez"
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">activitiesTables</p>
+            <p class="name">addNewDeals</p>
             <p class="text-sm">
-              <span>5:01:25 PM</span> / <span>00:00:21:357</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>2:32:02 PM</span> / <span>00:00:10:079</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">activitiesTables</h5>
-<span class='badge badge-success'>12.30.2025 5:01:25 PM</span>
-<span class='badge badge-danger'>12.30.2025 5:01:47 PM</span>
-<span class='badge badge-default'>00:00:21:357</span>
+<h5 class="test-status text-fail">addNewDeals</h5>
+<span class='badge badge-success'>12.31.2025 2:32:02 PM</span>
+<span class='badge badge-danger'>12.31.2025 2:32:12 PM</span>
+<span class='badge badge-default'>00:00:10:079</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -290,10 +476,62 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:01:47 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:32:12 PM</td>
         <td>
-          Test Passed
+          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59334}, goog:processID: 19304, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59334/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e1761597588d1841ab2d3b593038c421
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.twozo.crm.base.BasePage.type(BasePage.java:30)
+	at com.twozo.crm.page.login.LoginPage.enterEmailId(LoginPage.java:23)
+	at com.twozo.crm.page.login.LoginPage.loginToCRM(LoginPage.java:41)
+	at com.twozo.crm.CRMTest.addNewDeals(CRMTest.java:165)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</textarea>
+          
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/addNewDeals_1767171732212.png' src="screenshots/addNewDeals_1767171732212.png">
+  
+    
+
+    </div></div>
         </td>
       </tr>
   </tbody>
@@ -301,25 +539,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="6"
+        <li class="test-item"  status="fail" test-id="6"
           author="Jabez"
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">testMergeDuplicateContacts</p>
+            <p class="name">companyTables</p>
             <p class="text-sm">
-              <span>5:01:49 PM</span> / <span>00:00:36:427</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>2:32:14 PM</span> / <span>00:00:10:142</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testMergeDuplicateContacts</h5>
-<span class='badge badge-success'>12.30.2025 5:01:49 PM</span>
-<span class='badge badge-danger'>12.30.2025 5:02:26 PM</span>
-<span class='badge badge-default'>00:00:36:427</span>
+<h5 class="test-status text-fail">companyTables</h5>
+<span class='badge badge-success'>12.31.2025 2:32:14 PM</span>
+<span class='badge badge-danger'>12.31.2025 2:32:24 PM</span>
+<span class='badge badge-default'>00:00:10:142</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -332,10 +570,41 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:02:26 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:32:24 PM</td>
         <td>
-          Test Passed
+          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62068}, goog:processID: 15472, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62068/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee8f217ba9a36791ad0ce789a8f45e6f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.twozo.crm.base.BasePage.type(BasePage.java:30)
+	at com.twozo.crm.page.login.LoginPage.enterEmailId(LoginPage.java:23)
+	at com.twozo.crm.page.login.LoginPage.loginToCRM(LoginPage.java:41)
+	at com.twozo.crm.CRMTest.companyTables(CRMTest.java:57)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</textarea>
+          
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/companyTables_1767171744086.png' src="screenshots/companyTables_1767171744086.png">
+  
+    
+
+    </div></div>
         </td>
       </tr>
   </tbody>
@@ -348,9 +617,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">testMergeDuplicatesCompany</p>
+            <p class="name">dealsTables</p>
             <p class="text-sm">
-              <span>5:02:28 PM</span> / <span>00:00:20:909</span>
+              <span>2:32:26 PM</span> / <span>00:00:10:106</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -358,10 +627,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">testMergeDuplicatesCompany</h5>
-<span class='badge badge-success'>12.30.2025 5:02:28 PM</span>
-<span class='badge badge-danger'>12.30.2025 5:02:49 PM</span>
-<span class='badge badge-default'>00:00:20:909</span>
+<h5 class="test-status text-fail">dealsTables</h5>
+<span class='badge badge-success'>12.31.2025 2:32:26 PM</span>
+<span class='badge badge-danger'>12.31.2025 2:32:36 PM</span>
+<span class='badge badge-default'>00:00:10:106</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -375,12 +644,180 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:02:49 PM</td>
+        <td>2:32:36 PM</td>
         <td>
-          <textarea readonly class="code-block">java.lang.AssertionError:  No duplicate entry found for identifier: qwert expected object to not be null
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.assertNotNull(Assert.java:1496)
-	at com.twozo.crm.CRMTest.testMergeDuplicatesCompany(CRMTest.java:107)
+          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61700}, goog:processID: 19664, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61700/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3e36b1dcfac79ea8ee46d2180d6ad5b1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.twozo.crm.base.BasePage.type(BasePage.java:30)
+	at com.twozo.crm.page.login.LoginPage.enterEmailId(LoginPage.java:23)
+	at com.twozo.crm.page.login.LoginPage.loginToCRM(LoginPage.java:41)
+	at com.twozo.crm.CRMTest.dealsTables(CRMTest.java:67)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</textarea>
+          
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/dealsTables_1767171756090.png' src="screenshots/dealsTables_1767171756090.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="8"
+          author="Jabez"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">performSearch</p>
+            <p class="text-sm">
+              <span>2:32:38 PM</span> / <span>00:00:10:137</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">performSearch</h5>
+<span class='badge badge-success'>12.31.2025 2:32:38 PM</span>
+<span class='badge badge-danger'>12.31.2025 2:32:48 PM</span>
+<span class='badge badge-default'>00:00:10:137</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Jabez</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:32:48 PM</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59991}, goog:processID: 5584, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59991/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cc1eba697d98d5f193d9b130353a9bc9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.twozo.crm.base.BasePage.type(BasePage.java:30)
+	at com.twozo.crm.page.login.LoginPage.enterEmailId(LoginPage.java:23)
+	at com.twozo.crm.page.login.LoginPage.loginToCRM(LoginPage.java:41)
+	at com.twozo.crm.CRMTest.performSearch(CRMTest.java:48)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</textarea>
+          
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/performSearch_1767171768586.png' src="screenshots/performSearch_1767171768586.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="9"
+          author="Jabez"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">signupOtpFlow</p>
+            <p class="text-sm">
+              <span>2:32:50 PM</span> / <span>00:00:10:148</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">signupOtpFlow</h5>
+<span class='badge badge-success'>12.31.2025 2:32:50 PM</span>
+<span class='badge badge-danger'>12.31.2025 2:33:00 PM</span>
+<span class='badge badge-default'>00:00:10:148</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Jabez</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:33:00 PM</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[text()='Sign Up']"}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d7705737f2b643e4bd0f2181e7a1d06c, findElement {using=xpath, value=//p[text()='Sign Up']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61179}, goog:processID: 8404, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61179/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d7705737f2b643e4bd0f2181e7a1d06c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at com.twozo.crm.base.BasePage.click(BasePage.java:26)
+	at com.twozo.crm.page.login.LoginPage.ClickSignUp(LoginPage.java:35)
+	at com.twozo.crm.CRMTest.signupOtpFlow(CRMTest.java:140)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -404,14 +841,20 @@
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 	at org.testng.TestNG.runSuites(TestNG.java:1112)
 	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 </textarea>
           
     <div class="row mb-3"><div class="col-md-3">
     
 
-<img data-featherlight='screenshots/testMergeDuplicatesCompany_1767094369475.png' src="screenshots/testMergeDuplicatesCompany_1767094369475.png">
+<img data-featherlight='screenshots/signupOtpFlow_1767171780251.png' src="screenshots/signupOtpFlow_1767171780251.png">
   
     
 
@@ -423,109 +866,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="8"
+        <li class="test-item"  status="fail" test-id="10"
           author="Jabez"
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">testAddNewContacts</p>
             <p class="text-sm">
-              <span>5:02:52 PM</span> / <span>00:00:14:864</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>2:33:01 PM</span> / <span>00:00:10:074</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testAddNewContacts</h5>
-<span class='badge badge-success'>12.30.2025 5:02:52 PM</span>
-<span class='badge badge-danger'>12.30.2025 5:03:07 PM</span>
-<span class='badge badge-default'>00:00:14:864</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">Jabez</span></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:03:07 PM</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="9"
-          author="Jabez"
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">addNewContactsUsingFaker</p>
-            <p class="text-sm">
-              <span>5:03:10 PM</span> / <span>00:00:15:117</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">addNewContactsUsingFaker</h5>
-<span class='badge badge-success'>12.30.2025 5:03:10 PM</span>
-<span class='badge badge-danger'>12.30.2025 5:03:25 PM</span>
-<span class='badge badge-default'>00:00:15:117</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">Jabez</span></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:03:25 PM</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="10"
-          author="Jabez"
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">addNewContactsUsingFaker</p>
-            <p class="text-sm">
-              <span>5:03:27 PM</span> / <span>00:00:15:745</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">addNewContactsUsingFaker</h5>
-<span class='badge badge-success'>12.30.2025 5:03:27 PM</span>
-<span class='badge badge-danger'>12.30.2025 5:03:43 PM</span>
-<span class='badge badge-default'>00:00:15:745</span>
+<h5 class="test-status text-fail">testAddNewContacts</h5>
+<span class='badge badge-success'>12.31.2025 2:33:01 PM</span>
+<span class='badge badge-danger'>12.31.2025 2:33:11 PM</span>
+<span class='badge badge-default'>00:00:10:074</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -538,10 +897,62 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:03:43 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:33:11 PM</td>
         <td>
-          Test Passed
+          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52349}, goog:processID: 2472, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52349/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b51b86a99c35e4f6dd9b799631fb5658
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.twozo.crm.base.BasePage.type(BasePage.java:30)
+	at com.twozo.crm.page.login.LoginPage.enterEmailId(LoginPage.java:23)
+	at com.twozo.crm.page.login.LoginPage.loginToCRM(LoginPage.java:41)
+	at com.twozo.crm.CRMTest.testAddNewContacts(CRMTest.java:115)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</textarea>
+          
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/testAddNewContacts_1767171791850.png' src="screenshots/testAddNewContacts_1767171791850.png">
+  
+    
+
+    </div></div>
         </td>
       </tr>
   </tbody>
@@ -549,25 +960,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="11"
+        <li class="test-item"  status="fail" test-id="11"
           author="Jabez"
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">signupOtpFlow</p>
+            <p class="name">testMergeDuplicateContacts</p>
             <p class="text-sm">
-              <span>5:03:46 PM</span> / <span>00:00:25:196</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>2:33:13 PM</span> / <span>00:00:10:106</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">signupOtpFlow</h5>
-<span class='badge badge-success'>12.30.2025 5:03:46 PM</span>
-<span class='badge badge-danger'>12.30.2025 5:04:11 PM</span>
-<span class='badge badge-default'>00:00:25:196</span>
+<h5 class="test-status text-fail">testMergeDuplicateContacts</h5>
+<span class='badge badge-success'>12.31.2025 2:33:13 PM</span>
+<span class='badge badge-danger'>12.31.2025 2:33:23 PM</span>
+<span class='badge badge-default'>00:00:10:106</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -580,10 +991,62 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:04:11 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:33:23 PM</td>
         <td>
-          Test Passed
+          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57386}, goog:processID: 14168, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57386/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a9fc34efb6b6a3db5045d7ef6f872df
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.twozo.crm.base.BasePage.type(BasePage.java:30)
+	at com.twozo.crm.page.login.LoginPage.enterEmailId(LoginPage.java:23)
+	at com.twozo.crm.page.login.LoginPage.loginToCRM(LoginPage.java:41)
+	at com.twozo.crm.CRMTest.testMergeDuplicateContacts(CRMTest.java:87)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</textarea>
+          
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/testMergeDuplicateContacts_1767171803445.png' src="screenshots/testMergeDuplicateContacts_1767171803445.png">
+  
+    
+
+    </div></div>
         </td>
       </tr>
   </tbody>
@@ -596,9 +1059,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">addNewCompany</p>
+            <p class="name">testMergeDuplicatesCompany</p>
             <p class="text-sm">
-              <span>5:04:14 PM</span> / <span>00:00:24:290</span>
+              <span>2:33:25 PM</span> / <span>00:00:10:091</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -606,10 +1069,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">addNewCompany</h5>
-<span class='badge badge-success'>12.30.2025 5:04:14 PM</span>
-<span class='badge badge-danger'>12.30.2025 5:04:38 PM</span>
-<span class='badge badge-default'>00:00:24:290</span>
+<h5 class="test-status text-fail">testMergeDuplicatesCompany</h5>
+<span class='badge badge-success'>12.31.2025 2:33:25 PM</span>
+<span class='badge badge-danger'>12.31.2025 2:33:35 PM</span>
+<span class='badge badge-default'>00:00:10:091</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -623,20 +1086,20 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:04:38 PM</td>
+        <td>2:33:35 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //li[@role='option']//p[normalize-space()='South Georgia and the South Sandwich Islands'] (tried for 10 second(s) with 500 milliseconds interval)
+          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.169, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54029}, goog:processID: 17744, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54029/devtoo..., se:cdpVersion: 143.0.7499.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f986e031f02a54e0fb0fb5418a74ca57
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63614}, goog:processID: 22356, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63614/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ba66debb40beffc0d1d97ceb2c4db6c4
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.twozo.crm.base.BasePage.searchAndSelectDropDown(BasePage.java:93)
-	at com.twozo.crm.page.company.AddCompanyPage.selectCountry(AddCompanyPage.java:56)
-	at com.twozo.crm.page.company.AddCompanyPage.addNewCompanyForm(AddCompanyPage.java:75)
-	at com.twozo.crm.CRMTest.addNewCompany(CRMTest.java:159)
+	at com.twozo.crm.base.BasePage.type(BasePage.java:30)
+	at com.twozo.crm.page.login.LoginPage.enterEmailId(LoginPage.java:23)
+	at com.twozo.crm.page.login.LoginPage.loginToCRM(LoginPage.java:41)
+	at com.twozo.crm.CRMTest.testMergeDuplicatesCompany(CRMTest.java:101)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -660,14 +1123,93 @@ Session ID: f986e031f02a54e0fb0fb5418a74ca57
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 	at org.testng.TestNG.runSuites(TestNG.java:1112)
 	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 </textarea>
           
     <div class="row mb-3"><div class="col-md-3">
     
 
-<img data-featherlight='screenshots/addNewCompany_1767094478170.png' src="screenshots/addNewCompany_1767094478170.png">
+<img data-featherlight='screenshots/testMergeDuplicatesCompany_1767171815208.png' src="screenshots/testMergeDuplicatesCompany_1767171815208.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="13"
+          author="Jabez"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">webTables</p>
+            <p class="text-sm">
+              <span>2:33:36 PM</span> / <span>00:00:10:122</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">webTables</h5>
+<span class='badge badge-success'>12.31.2025 2:33:36 PM</span>
+<span class='badge badge-danger'>12.31.2025 2:33:46 PM</span>
+<span class='badge badge-default'>00:00:10:122</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Jabez</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:33:46 PM</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\HS9351~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60840}, goog:processID: 21940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60840/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f930f8668555c8373f34a4be0caaeab6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.twozo.crm.base.BasePage.type(BasePage.java:30)
+	at com.twozo.crm.page.login.LoginPage.enterEmailId(LoginPage.java:23)
+	at com.twozo.crm.page.login.LoginPage.loginToCRM(LoginPage.java:41)
+	at com.twozo.crm.CRMTest.webTables(CRMTest.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</textarea>
+          
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/webTables_1767171826936.png' src="screenshots/webTables_1767171826936.png">
   
     
 
@@ -701,12 +1243,12 @@ Session ID: f986e031f02a54e0fb0fb5418a74ca57
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.TimeoutException</p>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.TimeoutException</h4>
+<h4>org.openqa.selenium.NoSuchElementException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -720,9 +1262,9 @@ Session ID: f986e031f02a54e0fb0fb5418a74ca57
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>17:04:14 PM</td>
+<td>14:32:50 PM</td>
 <td>
-<a href="#" class="linked" test-id='12' id='12'>addNewCompany</a>
+<a href="#" class="linked" test-id='9' id='9'>signupOtpFlow</a>
 </td>
 </tr>
 </tbody>
@@ -732,15 +1274,15 @@ Session ID: f986e031f02a54e0fb0fb5418a74ca57
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
+<span class='badge log badge-danger'>12</span>
 </span>
-<p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
+<p class="name">org.openqa.selenium.TimeoutException</p>
+<p class="duration text-sm">12 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
+<h4>org.openqa.selenium.TimeoutException</h4>
+<span status="fail" class='badge log badge-danger'>12 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -753,9 +1295,86 @@ Session ID: f986e031f02a54e0fb0fb5418a74ca57
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>17:02:28 PM</td>
+<td>14:31:12 PM</td>
 <td>
-<a href="#" class="linked" test-id='7' id='7'>testMergeDuplicatesCompany</a>
+<a href="#" class="linked" test-id='1' id='1'>activitiesTables</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:31:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>addNewCompany</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:31:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>addNewContactsUsingFaker</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:31:50 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>addNewContactsUsingFaker</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:32:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>addNewDeals</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:32:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>companyTables</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:32:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>dealsTables</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:32:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>performSearch</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:33:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>testAddNewContacts</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:33:13 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>testMergeDuplicateContacts</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:33:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>testMergeDuplicatesCompany</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:33:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>webTables</a>
 </td>
 </tr>
 </tbody>
@@ -781,17 +1400,15 @@ Session ID: f986e031f02a54e0fb0fb5418a74ca57
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>10</span>
-<span class='badge log badge-danger'>2</span>
+<span class='badge log badge-danger'>13</span>
 </span>
 <p class="name">Jabez</p>
-<p class="duration text-sm">12 tests</p>
+<p class="duration text-sm">13 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>Jabez</h4>
-<span status="pass" class='badge log pass-bg'>10 passed</span>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
+<span status="fail" class='badge log badge-danger'>13 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -802,88 +1419,95 @@ Session ID: f986e031f02a54e0fb0fb5418a74ca57
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:00:01 PM</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:31:12 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='1'>webTables</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:00:28 PM</td>
-<td>
-<a href="#" class="linked" test-id='2' id='2'>performSearch</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:00:39 PM</td>
-<td>
-<a href="#" class="linked" test-id='3' id='3'>companyTables</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:01:01 PM</td>
-<td>
-<a href="#" class="linked" test-id='4' id='4'>dealsTables</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:01:25 PM</td>
-<td>
-<a href="#" class="linked" test-id='5' id='5'>activitiesTables</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:01:49 PM</td>
-<td>
-<a href="#" class="linked" test-id='6' id='6'>testMergeDuplicateContacts</a>
+<a href="#" class="linked" test-id='1' id='1'>activitiesTables</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>17:02:28 PM</td>
+<td>14:31:25 PM</td>
 <td>
-<a href="#" class="linked" test-id='7' id='7'>testMergeDuplicatesCompany</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:02:52 PM</td>
-<td>
-<a href="#" class="linked" test-id='8' id='8'>testAddNewContacts</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:03:10 PM</td>
-<td>
-<a href="#" class="linked" test-id='9' id='9'>addNewContactsUsingFaker</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:03:27 PM</td>
-<td>
-<a href="#" class="linked" test-id='10' id='10'>addNewContactsUsingFaker</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>17:03:46 PM</td>
-<td>
-<a href="#" class="linked" test-id='11' id='11'>signupOtpFlow</a>
+<a href="#" class="linked" test-id='2' id='2'>addNewCompany</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>17:04:14 PM</td>
+<td>14:31:38 PM</td>
 <td>
-<a href="#" class="linked" test-id='12' id='12'>addNewCompany</a>
+<a href="#" class="linked" test-id='3' id='3'>addNewContactsUsingFaker</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:31:50 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>addNewContactsUsingFaker</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:32:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>addNewDeals</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:32:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>companyTables</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:32:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>dealsTables</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:32:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>performSearch</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:32:50 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>signupOtpFlow</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:33:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>testAddNewContacts</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:33:13 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>testMergeDuplicateContacts</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:33:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>testMergeDuplicatesCompany</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:33:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>webTables</a>
 </td>
 </tr>
 </tbody>
@@ -903,25 +1527,25 @@ Session ID: f986e031f02a54e0fb0fb5418a74ca57
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 30, 2025 04:59:53 PM</h3>
+<h3>Dec 31, 2025 02:31:04 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 30, 2025 05:04:38 PM</h3>
+<h3>Dec 31, 2025 02:33:47 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>10</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>2</h3>
+<h3>13</h3>
 </div></div>
 </div>
 </div>
@@ -937,12 +1561,12 @@ Session ID: f986e031f02a54e0fb0fb5418a74ca57
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='83%'>
-<b>10</b> tests passed
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='16%'><b>2</b> tests failed,
+<small data-tooltip='100%'><b>13</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -960,9 +1584,9 @@ Session ID: f986e031f02a54e0fb0fb5418a74ca57
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='83%'><b>10</b> events passed</small></div>
+<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
-<small data-tooltip='16%'><b>2</b> events failed,
+<small data-tooltip='100%'><b>13</b> events failed,
 <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -979,7 +1603,7 @@ Session ID: f986e031f02a54e0fb0fb5418a74ca57
 </div></div>
 <script>
 var timeline = {
-"webTables":21.841,"performSearch":7.766,"companyTables":19.553,"dealsTables":22.003,"activitiesTables":21.357,"testMergeDuplicateContacts":36.427,"testMergeDuplicatesCompany":20.909,"testAddNewContacts":14.864,"addNewContactsUsingFaker":15.117,"addNewContactsUsingFaker":15.745,"signupOtpFlow":25.196,"addNewCompany":24.29
+"activitiesTables":10.231,"addNewCompany":10.121,"addNewContactsUsingFaker":10.165,"addNewContactsUsingFaker":10.131,"addNewDeals":10.079,"companyTables":10.142,"dealsTables":10.106,"performSearch":10.137,"signupOtpFlow":10.148,"testAddNewContacts":10.074,"testMergeDuplicateContacts":10.106,"testMergeDuplicatesCompany":10.091,"webTables":10.122
 };
 </script>
 <div class="row">
@@ -991,11 +1615,11 @@ var timeline = {
 <tbody>
 <tr>
 <td>Jabez</td>
-<td>10</td>
-<td>2</td>
+<td>0</td>
+<td>13</td>
 <td>0</td>
 <td>0</td>
-<td>83.333%</td>
+<td>0%</td>
 </tr>
 </tbody>
 </table></div>
@@ -1028,8 +1652,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 10,
-failParent: 2,
+passParent: 0,
+failParent: 13,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -1045,8 +1669,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 10,
-failEvents: 2,
+passEvents: 0,
+failEvents: 13,
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0
