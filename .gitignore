@@ -37,3 +37,12 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### TestNG & Selenium ###
+test-output/
+screenshots/
+*.png
+
+### Extent Reports ###
+ExtentReport.html
+extent-reports/
