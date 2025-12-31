@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="listener.ExtentTestNGListener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/H S/IdeaProjects/crm.twozo/src/test/java/com/twozo/crm/CRMTest.java">
+        <classes>
+            <class name="com.twozo.crm.CRMTest">
+                <methods>
+                    <include name="webTables"/>
+                    <include name="performSearch"/>
+                    <include name="companyTables"/>
+                    <include name="dealsTables"/>
+                    <include name="activitiesTables"/>
+                    <include name="testMergeDuplicateContacts"/>
+                    <include name="testMergeDuplicatesCompany"/>
+                    <include name="testAddNewContacts"/>
+                    <include name="addNewContactsUsingFaker"/>
+                    <include name="signupOtpFlow"/>
+                    <include name="addNewCompany"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

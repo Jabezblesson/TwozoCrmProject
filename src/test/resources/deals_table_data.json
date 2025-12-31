@@ -1,0 +1,6 @@
+{
+  "dealsTable": {
+    "columns": ["title","deal value"],
+    "matchValue": "rozon"
+  }
+}

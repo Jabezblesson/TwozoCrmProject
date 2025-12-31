@@ -1,0 +1,6 @@
+{
+  "activitiesTable": {
+    "columns": ["title","id"],
+    "matchValue": "raven"
+  }
+}

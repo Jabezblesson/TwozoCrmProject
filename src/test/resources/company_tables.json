@@ -1,0 +1,6 @@
+{
+  "CompanyTables": {
+    "columns": ["name","address"],
+    "matchValue": "twozo.pvt"
+  }
+}

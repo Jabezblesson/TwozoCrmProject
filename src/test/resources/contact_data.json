@@ -1,0 +1,19 @@
+{
+  "contactData": {
+    "firstName": "jabez",
+    "lastName": "blesson",
+    "email": "robin2121@gmail.com",
+    "emailType": "Home",
+    "phone": "9944975850",
+    "phoneType": "Mobile",
+    "company": "qwert",
+    "designation": "salesMan",
+    "owner": "Jabez Blesson",
+    "lifeCycleStage": "Customer",
+    "lifeCycleStatus": "Won",
+    "facebookProfile": "https://www.example.com",
+    "linkedInProfile": "https://www.example.com",
+    "subscriptionStatus": "Subscribed",
+    "subscriptionType" : ["Conference and events","Product updates","Promotional"]
+  }
+}
