@@ -29,6 +29,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import javax.swing.*;
+
 @Listeners(listener.ExtentTestNGListener.class)
 public class CRMTest extends BaseTest {
 
@@ -157,6 +159,8 @@ public class CRMTest extends BaseTest {
         final AddCompanyPage addCompanyPage = dealsPage
                 .openAddOption().addCompany();
         addCompanyPage.addNewCompanyForm(companyData);
+        int a = 10;
+        System.out.println(a);
     }
 
     @Test(dataProvider = "addDeals",dataProviderClass = DealsDataProvider.class)
