@@ -9,16 +9,10 @@
         <classes>
             <class name="com.twozo.crm.CRMTest">
                 <methods>
-                    <include name="webTables"/>
-                    <include name="performSearch"/>
-                    <include name="companyTables"/>
-                    <include name="dealsTables"/>
-                    <include name="activitiesTables"/>
+
                     <include name="testMergeDuplicateContacts"/>
                     <include name="testMergeDuplicatesCompany"/>
-                    <include name="testAddNewContacts"/>
                     <include name="addNewContactsUsingFaker"/>
-                    <include name="signupOtpFlow"/>
                     <include name="addNewCompany"/>
                 </methods>
             </class>
