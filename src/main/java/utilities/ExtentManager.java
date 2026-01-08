@@ -13,6 +13,7 @@ public class ExtentManager {
         final ExtentReports extent = new ExtentReports();
         extent.attachReporter(reporter);
 
+
         reporter.config().setReportName("Twozo CRM Automation Report");
         reporter.config().setDocumentTitle("Automation Execution Report");
         extent.setSystemInfo("Project", "Twozo CRM");

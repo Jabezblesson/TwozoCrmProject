@@ -19,28 +19,44 @@ public class ExtentTestNGListener implements ITestListener {
     private static final ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
 
+    @Override
     public void onTestStart(final ITestResult result) {
-        final ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName());
+        ExtentTest extentTest =
+                extent.createTest(result.getMethod().getMethodName(),
+                        result.getMethod().getDescription());
+
         extentTest.assignAuthor("Jabez");
+        extentTest.assignCategory(result.getMethod().getGroups());
+
         test.set(extentTest);
     }
 
+    @Override
     public void onTestSuccess(final ITestResult result) {
-        test.get().pass("Test Passed");
+        test.get().pass("✅ Test Passed");
     }
 
+    @Override
     public void onTestFailure(final ITestResult result) {
-        final  Object testClass = result.getInstance();
-        final  WebDriver driver = ((BaseTest) testClass).driver;
-        final  String screenshotPath = ScreenShotUtils.takeScreenShot(driver, result.getMethod().getMethodName());
+        Object testClass = result.getInstance();
+        WebDriver driver = ((BaseTest) testClass).driver;
+
+        String screenshotPath =
+                ScreenShotUtils.takeScreenShot(
+                        driver,
+                        result.getMethod().getMethodName() + "_" + System.currentTimeMillis()
+                );
+
         test.get().fail(result.getThrowable(),
-                MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build() );
+                MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
     }
 
+    @Override
     public void onTestSkipped(final ITestResult result) {
-        test.get().skip("Test Skipped");
+        test.get().skip("⚠ Test Skipped");
     }
 
+    @Override
     public void onFinish(final ITestContext context) {
         extent.flush();
     }

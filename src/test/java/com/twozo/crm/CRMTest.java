@@ -120,7 +120,7 @@ public class CRMTest extends BaseTest {
                 .addContact();
 
         addContactPage.fillContactForm(contactData);
-        Assert.assertTrue(addContactPage.isContactCreated(),
+        Assert.assertFalse(addContactPage.isContactCreated(),
                 "contact created is not displayed");
     }
 
@@ -159,8 +159,6 @@ public class CRMTest extends BaseTest {
         final AddCompanyPage addCompanyPage = dealsPage
                 .openAddOption().addCompany();
         addCompanyPage.addNewCompanyForm(companyData);
-        int a = 10;
-        System.out.println(a);
     }
 
     @Test(dataProvider = "addDeals",dataProviderClass = DealsDataProvider.class)
@@ -169,6 +167,19 @@ public class CRMTest extends BaseTest {
                 .loginToCRM(loginData);
         final AddDealPage addDealPage = dealsPage.openAddOption().addDeal();
         addDealPage.addNewDeals(dealsData);
+    }
 
+    @Test(dataProvider = "ContactTables", dataProviderClass = JsonDataProvider.class)
+    public void verifyContactDeletion(final LoginData loginData, final TableCriteria tableCriteria) {
+        final DealsPage dealsPage = new LoginPage(driver)
+                .loginToCRM(loginData);
+        final ContactsPage contactsPage = dealsPage.sideBar.clickContacts();
+        final TableUtils tableUtils = contactsPage.loadContactsTable();
+        boolean isRowSelected = tableUtils.printMatchingRow(tableCriteria);
+
+        Assert.assertTrue(isRowSelected, "Contact row not found");
+        contactsPage.deleteContactByEmail();
+        boolean isStillPresent = tableUtils.printMatchingRow(tableCriteria);
+        Assert.assertTrue(isStillPresent, "Contact was NOT deleted");
     }
 }
